@@ -18,8 +18,8 @@ module ChamberEvents
       it {subject[:title].should == 'Business After Hours at PanCor Construction & Development'}
       it {subject[:link].should match('elginchamber')}
       it {subject[:date].should == Date.new(2013, 6, 6)}
-      it {subject[:time_start].should == '1700'}
-      it {subject[:time_end].should == '1900'}
+      it {subject[:time_start].should == DateTime.new(2013, 6, 6, 17, 0)}
+      it {subject[:time_end].should == DateTime.new(2013, 6, 6, 19, 0)}
       it {subject[:all_day].should be_false}
     end
 
