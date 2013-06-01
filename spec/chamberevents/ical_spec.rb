@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'chamberevents/ical'
 
-module ChamberEvents
+module Chamberevents
   describe Ical do
     let(:cut) {Ical}
     let(:events) {
@@ -31,5 +31,6 @@ module ChamberEvents
     it {should match('National Day of Civic Hacking')}
     it {should match('hackforchange')}
     it {should match('20130601T170000')}
+    it {should match('20130601T190000')}
   end
 end

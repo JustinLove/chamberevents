@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'chamberevents/scrape'
 
-module ChamberEvents
+module Chamberevents
   describe Scrape do
     let(:cut) {Scrape}
     def sample

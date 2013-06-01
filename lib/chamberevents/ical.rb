@@ -6,10 +6,16 @@ module Icalendar2
       name "URL"
       value :types => [:text]
     end
-  end
+
+    class Dtend < Base
+      name "DTEND"
+      # main code gets these backwards
+      value :types => [:date_time, :date]
+   end
+ end
 end
 
-module ChamberEvents
+module Chamberevents
   class Ical
     def initialize(events)
       @events = events

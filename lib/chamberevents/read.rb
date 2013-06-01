@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'chamberevents/scrape'
 
-module ChamberEvents
+module Chamberevents
   module Read
     extend self
 

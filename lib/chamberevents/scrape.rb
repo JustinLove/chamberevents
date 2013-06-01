@@ -1,6 +1,6 @@
 require 'nokogiri'
 
-module ChamberEvents
+module Chamberevents
   class Scrape
     def initialize(html)
       @doc = Nokogiri.HTML(html)
