@@ -24,9 +24,9 @@ config.ru
 LICENSE.txt
 Rakefile
 README.md
+doc/elginchamber201306.html
 FILES
   spec.test_files    = <<TEST.split($/)
-doc/elginchamber201306.html
 spec/chamberevents/ical_spec.rb
 spec/chamberevents/read_spec.rb
 spec/chamberevents/scrape_spec.rb
