@@ -9,13 +9,29 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Justin Love"]
   spec.email         = ["git@JustinLove.name"]
   spec.description   = %q{Scrape Elgin Chamber events and provide an ical feed}
-  spec.summary       = %q{Scrape Elgin Chamber events and provide an ical feed}
-  spec.homepage      = ""
+  spec.summary       = %q{Primarily intended to run as a herkou app, but the sinatra server is modular, and really just a redirect.  The work is done by a rake task calling the gem, which uploads a file to S3.}
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.files         = <<FILES.split($/)
+lib/chamberevents/ical.rb
+lib/chamberevents/read.rb
+lib/chamberevents/scrape.rb
+lib/chamberevents/server.rb
+lib/chamberevents/upload.rb
+lib/chamberevents/version.rb
+lib/chamberevents.rb
+config.ru
+LICENSE.txt
+Rakefile
+README.md
+FILES
+  spec.test_files    = <<TEST.split($/)
+doc/elginchamber201306.html
+spec/chamberevents/ical_spec.rb
+spec/chamberevents/read_spec.rb
+spec/chamberevents/scrape_spec.rb
+spec/spec_helper.rb
+TEST
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "nokogiri"

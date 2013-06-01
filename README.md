@@ -1,6 +1,6 @@
 # Chamberevents
 
-TODO: Write a gem description
+Scrape the [Elgin Chamber](http://elginchamber.com/) [events](http://elginchamber.com/events) site and produce an ical feed that can be used by other applications.
 
 ## Installation
 
@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Primarily intended to run as a herkou app, but the sinatra server is modular, and really just a redirect.  The work is done by a rake task calling the gem, which uploads a file to S3.
+
+    $ rake update
+
+The gem requires a few ENV variables to work properly:
+
+- `AWS_KEY`
+- `AWS_SECRET`
+- `S3_BUCKET`
 
 ## Contributing
 
